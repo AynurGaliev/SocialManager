@@ -13,6 +13,16 @@
 		A4C88CCA1BB2A6D0003C64CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C88CC91BB2A6D0003C64CD /* Images.xcassets */; };
 		A4C88CCD1BB2A6D0003C64CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C88CCB1BB2A6D0003C64CD /* LaunchScreen.xib */; };
 		A4C88CD91BB2A6D0003C64CD /* SocialManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CD81BB2A6D0003C64CD /* SocialManagerTests.swift */; };
+		A4C88CE81BB2AD9F003C64CD /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C88CE41BB2AD9F003C64CD /* Fabric.framework */; };
+		A4C88CE91BB2AD9F003C64CD /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C88CE51BB2AD9F003C64CD /* TwitterKit.framework */; };
+		A4C88CEA1BB2AD9F003C64CD /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C88CE61BB2AD9F003C64CD /* TwitterKitResources.bundle */; };
+		A4C88CEB1BB2AD9F003C64CD /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C88CE71BB2AD9F003C64CD /* TwitterCore.framework */; };
+		A4C88CED1BB2EFAB003C64CD /* SocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CEC1BB2EFAB003C64CD /* SocialManager.swift */; };
+		A4C88CF01BB2F0F9003C64CD /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CEF1BB2F0F9003C64CD /* SocialNetwork.swift */; };
+		A4C88CF21BB2F40B003C64CD /* FBSocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CF11BB2F40B003C64CD /* FBSocialNetwork.swift */; };
+		A4C88CF41BB2F81C003C64CD /* VKSocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CF31BB2F81C003C64CD /* VKSocialNetwork.swift */; };
+		A4C88CF61BB2FA67003C64CD /* TWSocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CF51BB2FA67003C64CD /* TWSocialNetwork.swift */; };
+		C41C2F9F446C05B977E154BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4302B25BCE7D998AAB72C066 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B35A284DACB202B1E6F8DFF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4302B25BCE7D998AAB72C066 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FE19B8350AA8EDBB246D3D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A4C88CBD1BB2A6D0003C64CD /* SocialManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C88CC11BB2A6D0003C64CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4C88CC21BB2A6D0003C64CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +49,16 @@
 		A4C88CD21BB2A6D0003C64CD /* SocialManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C88CD71BB2A6D0003C64CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4C88CD81BB2A6D0003C64CD /* SocialManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManagerTests.swift; sourceTree = "<group>"; };
+		A4C88CE21BB2AA48003C64CD /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
+		A4C88CE41BB2AD9F003C64CD /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		A4C88CE51BB2AD9F003C64CD /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		A4C88CE61BB2AD9F003C64CD /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		A4C88CE71BB2AD9F003C64CD /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		A4C88CEC1BB2EFAB003C64CD /* SocialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialManager.swift; sourceTree = "<group>"; };
+		A4C88CEF1BB2F0F9003C64CD /* SocialNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
+		A4C88CF11BB2F40B003C64CD /* FBSocialNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSocialNetwork.swift; sourceTree = "<group>"; };
+		A4C88CF31BB2F81C003C64CD /* VKSocialNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKSocialNetwork.swift; sourceTree = "<group>"; };
+		A4C88CF51BB2FA67003C64CD /* TWSocialNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWSocialNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +66,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C41C2F9F446C05B977E154BA /* libPods.a in Frameworks */,
+				A4C88CEB1BB2AD9F003C64CD /* TwitterCore.framework in Frameworks */,
+				A4C88CE81BB2AD9F003C64CD /* Fabric.framework in Frameworks */,
+				A4C88CE91BB2AD9F003C64CD /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +83,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C60878396BC22CB9A296FBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4C88CE41BB2AD9F003C64CD /* Fabric.framework */,
+				A4C88CE51BB2AD9F003C64CD /* TwitterKit.framework */,
+				A4C88CE61BB2AD9F003C64CD /* TwitterKitResources.bundle */,
+				A4C88CE71BB2AD9F003C64CD /* TwitterCore.framework */,
+				4302B25BCE7D998AAB72C066 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4C88CB41BB2A6D0003C64CD = {
 			isa = PBXGroup;
 			children = (
 				A4C88CBF1BB2A6D0003C64CD /* SocialManager */,
 				A4C88CD51BB2A6D0003C64CD /* SocialManagerTests */,
 				A4C88CBE1BB2A6D0003C64CD /* Products */,
+				AB5613D75F3CB2A93D2E5351 /* Pods */,
+				3C60878396BC22CB9A296FBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +118,7 @@
 		A4C88CBF1BB2A6D0003C64CD /* SocialManager */ = {
 			isa = PBXGroup;
 			children = (
+				A4C88CEE1BB2F0E5003C64CD /* Manager */,
 				A4C88CC21BB2A6D0003C64CD /* AppDelegate.swift */,
 				A4C88CC41BB2A6D0003C64CD /* ViewController.swift */,
 				A4C88CC61BB2A6D0003C64CD /* Main.storyboard */,
@@ -91,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A4C88CC11BB2A6D0003C64CD /* Info.plist */,
+				A4C88CE21BB2AA48003C64CD /* BridgeHeader.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -112,6 +155,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A4C88CEE1BB2F0E5003C64CD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A4C88CEC1BB2EFAB003C64CD /* SocialManager.swift */,
+				A4C88CEF1BB2F0F9003C64CD /* SocialNetwork.swift */,
+				A4C88CF11BB2F40B003C64CD /* FBSocialNetwork.swift */,
+				A4C88CF31BB2F81C003C64CD /* VKSocialNetwork.swift */,
+				A4C88CF51BB2FA67003C64CD /* TWSocialNetwork.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		AB5613D75F3CB2A93D2E5351 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FE19B8350AA8EDBB246D3D8 /* Pods.debug.xcconfig */,
+				3B35A284DACB202B1E6F8DFF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4C88CDC1BB2A6D0003C64CD /* Build configuration list for PBXNativeTarget "SocialManager" */;
 			buildPhases = (
+				0B9BDA654C8DE9BC55BD65E7 /* Check Pods Manifest.lock */,
 				A4C88CB91BB2A6D0003C64CD /* Sources */,
 				A4C88CBA1BB2A6D0003C64CD /* Frameworks */,
 				A4C88CBB1BB2A6D0003C64CD /* Resources */,
+				45146F4A9714777C3CE461AB /* Copy Pods Resources */,
+				A4C88CE31BB2AD5A003C64CD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -192,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C88CEA1BB2AD9F003C64CD /* TwitterKitResources.bundle in Resources */,
 				A4C88CC81BB2A6D0003C64CD /* Main.storyboard in Resources */,
 				A4C88CCD1BB2A6D0003C64CD /* LaunchScreen.xib in Resources */,
 				A4C88CCA1BB2A6D0003C64CD /* Images.xcassets in Resources */,
@@ -207,13 +275,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B9BDA654C8DE9BC55BD65E7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		45146F4A9714777C3CE461AB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4C88CE31BB2AD5A003C64CD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 5702c6bbc30439224610319061ef3d28fbc087c3 3208d3d079e63924c65785ef59f04460e2d1eb3e54730fd75b035d295a0916c6";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4C88CB91BB2A6D0003C64CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C88CF41BB2F81C003C64CD /* VKSocialNetwork.swift in Sources */,
+				A4C88CED1BB2EFAB003C64CD /* SocialManager.swift in Sources */,
+				A4C88CF21BB2F40B003C64CD /* FBSocialNetwork.swift in Sources */,
 				A4C88CC51BB2A6D0003C64CD /* ViewController.swift in Sources */,
 				A4C88CC31BB2A6D0003C64CD /* AppDelegate.swift in Sources */,
+				A4C88CF01BB2F0F9003C64CD /* SocialNetwork.swift in Sources */,
+				A4C88CF61BB2FA67003C64CD /* TWSocialNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,21 +459,33 @@
 		};
 		A4C88CDD1BB2A6D0003C64CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FE19B8350AA8EDBB246D3D8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SocialManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = SocialManager/BridgeHeader.h;
 			};
 			name = Debug;
 		};
 		A4C88CDE1BB2A6D0003C64CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B35A284DACB202B1E6F8DFF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SocialManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = SocialManager/BridgeHeader.h;
 			};
 			name = Release;
 		};
@@ -411,6 +542,7 @@
 				A4C88CDE1BB2A6D0003C64CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4C88CDF1BB2A6D0003C64CD /* Build configuration list for PBXNativeTarget "SocialManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +551,7 @@
 				A4C88CE11BB2A6D0003C64CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

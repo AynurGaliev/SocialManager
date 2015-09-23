@@ -18,8 +18,38 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>vk5068677</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>vk5068677</string>
+				<string>fb402241839965923</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>5702c6bbc30439224610319061ef3d28fbc087c3</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Twitter</string>
+			</dict>
+		</array>
+	</dict>
+	<key>FacebookAppID</key>
+	<string>402241839965923</string>
+	<key>FacebookDisplayName</key>
+	<string>SocialManager</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -43,5 +73,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Twitter consumer key</key>
+	<string>yrqatpxiBDKD70xO076X5Bitb</string>
+	<key>Twitter secret key</key>
+	<string>wxvX1piY5RZTIglxAkTGVmtd8jAB5lRSSRlsCUP7cEzvWjzlVZ</string>
 </dict>
 </plist>
