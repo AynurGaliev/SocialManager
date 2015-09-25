@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A49832521BB566820032C8FD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49832511BB566820032C8FD /* Social.framework */; };
 		A4C88CC31BB2A6D0003C64CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CC21BB2A6D0003C64CD /* AppDelegate.swift */; };
 		A4C88CC51BB2A6D0003C64CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CC41BB2A6D0003C64CD /* ViewController.swift */; };
 		A4C88CC81BB2A6D0003C64CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C88CC61BB2A6D0003C64CD /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		3B35A284DACB202B1E6F8DFF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4302B25BCE7D998AAB72C066 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE19B8350AA8EDBB246D3D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A49832511BB566820032C8FD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A4C88CBD1BB2A6D0003C64CD /* SocialManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C88CC11BB2A6D0003C64CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4C88CC21BB2A6D0003C64CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49832521BB566820032C8FD /* Social.framework in Frameworks */,
 				C41C2F9F446C05B977E154BA /* libPods.a in Frameworks */,
 				A4C88CEB1BB2AD9F003C64CD /* TwitterCore.framework in Frameworks */,
 				A4C88CE81BB2AD9F003C64CD /* Fabric.framework in Frameworks */,
@@ -86,6 +89,7 @@
 		3C60878396BC22CB9A296FBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A49832511BB566820032C8FD /* Social.framework */,
 				A4C88CE41BB2AD9F003C64CD /* Fabric.framework */,
 				A4C88CE51BB2AD9F003C64CD /* TwitterKit.framework */,
 				A4C88CE61BB2AD9F003C64CD /* TwitterKitResources.bundle */,

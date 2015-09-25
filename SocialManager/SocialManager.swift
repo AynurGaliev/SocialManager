@@ -11,67 +11,44 @@ import UIKit
 typealias SuccessBlock = ((success: Bool) -> Void)?
 typealias LoginSuccessBlock = ((type: SocialType, success: Bool) -> Void)?
 
+enum HttpMethod: String {
+    case GET  = "GET"
+    case POST = "POST"
+    case DELETE = "DELETE"
+}
+
 class SocialManager: NSObject {
    
-    private var networks: Set<SocialNetwork>!
+    private static var networks: Set<SocialNetwork>! = Set<SocialNetwork>()
     
-    class var sharedManager: SocialManager {
-        struct Static {
-            static var token: dispatch_once_t!
-            static var instance: SocialManager!
-        }
-        dispatch_once(&Static.token!, { () -> Void in
-            Static.instance = SocialManager()
-        })
-        return Static.instance
-    }
+    class var VK: VKSocialNetwork? { return SocialManager.network(.VK) as? VKSocialNetwork }
+    class var FB: FBSocialNetwork? { return SocialManager.network(.FB) as? FBSocialNetwork }
+    class var TW: TWSocialNetwork? { return SocialManager.network(.TW) as? TWSocialNetwork }
     
     func setNetworks(socialNetworks: Set<SocialNetwork>) {
-        self.networks = socialNetworks
+        SocialManager.networks = socialNetworks
     }
     
     func removeNetwork(types: [SocialType]) {
-        for network in self.networks {
-            if contains(types, network.type) {
-                self.networks.remove(network)
-            }
-        }
+        
     }
     
-    func setup(types: Set<SocialType>) {
+    class func setup(types: Set<SocialType>) {
         for type in types {
-            self.networks.insert(SocialNetwork.create(type))
-        }
-    }
-    
-    func login(types: Set<SocialType>? = nil, delay: Double, completionBlock: LoginSuccessBlock) {
-        
-        let semaphore: dispatch_semaphore_t = dispatch_semaphore_create(1)
-        
-        if let lTypes = types {
-            for network: SocialNetwork in self.networks {
-                if lTypes.contains(network.type) {
-                    network.login({ (success) -> Void in
-                        dispatch_semaphore_signal(semaphore)
-                    })
-                    completionBlock?(type: network.type, success: (dispatch_semaphore_wait(semaphore, delay.time) == 0) )
-                }
-            }
+            SocialManager.networks.insert(SocialNetwork.create(type))
         }
     }
     
     func logout() {
-        for network in self.networks {
+        for network in SocialManager.networks {
             network.logout()
         }
     }
     
-    func network(type: SocialType) -> SocialNetwork? {
-        return filter(self.networks){$0.type == type}.first
-    }
-    
-    class func getAppID(type: SocialType) -> String {
-        return ""
+    private class func network(type: SocialType) -> SocialNetwork? {
+        return filter(SocialManager.networks, { (network: SocialNetwork) -> Bool in
+            return network.type == type
+        }).first
     }
 }
 

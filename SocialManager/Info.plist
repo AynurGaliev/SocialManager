@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>FS.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>com.flatstack.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -25,11 +25,13 @@
 			<string>vk5068677</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>vk5068677</string>
 				<string>fb402241839965923</string>
+				<string>vk5068677</string>
 			</array>
 		</dict>
 	</array>
+	<key>FacebookAppID</key>
+	<string>402241839965923</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Fabric</key>
@@ -46,12 +48,14 @@
 			</dict>
 		</array>
 	</dict>
-	<key>FacebookAppID</key>
-	<string>402241839965923</string>
 	<key>FacebookDisplayName</key>
 	<string>SocialManager</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>Twitter consumer key</key>
+	<string>yrqatpxiBDKD70xO076X5Bitb</string>
+	<key>Twitter secret key</key>
+	<string>wxvX1piY5RZTIglxAkTGVmtd8jAB5lRSSRlsCUP7cEzvWjzlVZ</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -73,9 +77,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>Twitter consumer key</key>
-	<string>yrqatpxiBDKD70xO076X5Bitb</string>
-	<key>Twitter secret key</key>
-	<string>wxvX1piY5RZTIglxAkTGVmtd8jAB5lRSSRlsCUP7cEzvWjzlVZ</string>
 </dict>
 </plist>

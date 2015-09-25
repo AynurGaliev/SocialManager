@@ -11,31 +11,38 @@ import UIKit
 enum SocialType: String {
     case FB       = "Facebook"
     case VK       = "Vkontakte"
-    case Twitter  = "Twitter"
+    case TW       = "Twitter"
     case WhatsApp = "Whatsapp"
+    case Undefined = ""
     
     var intValue: Int {
         switch self {
-            case .FB       : return 0
-            case .VK       : return 1
-            case .Twitter  : return 2
-            case .WhatsApp : return 3
+            case .FB        : return 0
+            case .VK        : return 1
+            case .TW        : return 2
+            case .WhatsApp  : return 3
+            case .Undefined : return -1
+        }
+    }
+    
+    var networkClass: AnyClass {
+        switch self {
+            case .FB        : return FBSocialNetwork.self
+            case .VK        : return VKSocialNetwork.self
+            case .TW        : return TWSocialNetwork.self
+            case .WhatsApp  : return NSObject.self
+            case .Undefined : return NSObject.self
         }
     }
 }
 
 class SocialNetwork: NSObject {
    
-    internal var type: SocialType!
-    internal var appID: String?
+    var type          : SocialType { return .Undefined }
+    class var appID   : String { fatalError("\(__FUNCTION__) not implemented")}
     
     override init() {
         super.init()
-    }
-    
-    private convenience init(type: SocialType) {
-        self.init()
-        self.type = type
     }
     
     func login(successBlock: ((success: Bool) -> Void)?) {
@@ -48,9 +55,18 @@ class SocialNetwork: NSObject {
     
     class func create(type: SocialType) -> SocialNetwork {
         switch type {
-            case .FB: return FBSocialNetwork()
-            case .VK: return VKSocialNetwork()
-            case .Twitter: return TWSocialNetwork()
+            case .FB : return FBSocialNetwork()
+            case .VK : return VKSocialNetwork()
+            case .TW : return TWSocialNetwork()
+            default  : return SocialNetwork()
         }
     }
+}
+
+class RequestBuilder {
+    
+    var _HTTPMethod : String!
+    var _method     : String!
+    var _apiVersion : String!
+
 }

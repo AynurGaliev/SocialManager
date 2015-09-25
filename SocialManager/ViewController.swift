@@ -7,19 +7,21 @@
 //
 
 import UIKit
+import Social
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        SocialManager.VK?.login({ (success) -> Void in
+            let builder = SocialManager.VK?.createBuilder()
+            builder?.Posts.GET.startRequest([:], successBlock: { (response) -> Void in
+                
+            }, failureBlock: { (error) -> Void in
+                
+            })
+        })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

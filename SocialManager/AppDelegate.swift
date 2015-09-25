@@ -1,4 +1,4 @@
-//
+   //
 //  AppDelegate.swift
 //  SocialManager
 //
@@ -27,12 +27,11 @@ class SocialAppDelegate: UIResponder, UIApplicationDelegate, VKSdkDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
-        SocialManager.sharedManager.setup()
-        Twitter.sharedInstance().startWithConsumerKey("yrqatpxiBDKD70xO076X5Bitb", consumerSecret: "wxvX1piY5RZTIglxAkTGVmtd8jAB5lRSSRlsCUP7cEzvWjzlVZ")
+        SocialManager.setup([.VK, .FB, .TW])
+        Twitter.sharedInstance().startWithConsumerKey(TWSocialNetwork.consumerKey, consumerSecret: TWSocialNetwork.consumerSecret)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        VKSdk.initializeWithDelegate(self, andAppId: "")
+        VKSdk.initializeWithDelegate(self, andAppId: VKSocialNetwork.appID)
         VKSdk.wakeUpSession()
-        println(NSBundle.mainBundle().infoDictionary!["CFBundleURLTypes"]![""])
         return true
     }
     
