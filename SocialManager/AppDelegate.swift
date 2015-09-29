@@ -27,7 +27,6 @@ class SocialAppDelegate: UIResponder, UIApplicationDelegate, VKSdkDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
-        SocialManager.setup([.VK, .FB, .TW])
         Twitter.sharedInstance().startWithConsumerKey(TWSocialNetwork.consumerKey, consumerSecret: TWSocialNetwork.consumerSecret)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         VKSdk.initializeWithDelegate(self, andAppId: VKSocialNetwork.appID)

@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4249B821BBAA5DF00981995 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4249B811BBAA5DF00981995 /* RootViewController.swift */; };
+		A4249B851BBAA9A200981995 /* VKSocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4249B841BBAA9A200981995 /* VKSocialController.swift */; };
+		A4249B8D1BBAAAAE00981995 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4249B8B1BBAAAAE00981995 /* PostCell.swift */; };
+		A4249B8E1BBAAAAE00981995 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4249B8C1BBAAAAE00981995 /* PostCell.xib */; };
+		A4249B941BBABD6900981995 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4249B921BBABD6900981995 /* LoadingCell.swift */; };
+		A4249B951BBABD6900981995 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4249B931BBABD6900981995 /* LoadingCell.xib */; };
+		A4249B971BBAC3C800981995 /* BaseSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4249B961BBAC3C800981995 /* BaseSocialViewController.swift */; };
+		A4249B991BBAEDCE00981995 /* FBSocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4249B981BBAEDCE00981995 /* FBSocialController.swift */; };
+		A4249B9B1BBAEDF500981995 /* TWSocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4249B9A1BBAEDF500981995 /* TWSocialController.swift */; };
+		A4249B9E1BBAF4D700981995 /* SocialModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4249B9C1BBAF4D700981995 /* SocialModel.xcdatamodeld */; };
+		A4249BA51BBAF97200981995 /* ImageUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = A4249BA01BBAF97200981995 /* ImageUrl.m */; };
+		A4249BA61BBAF97200981995 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A4249BA21BBAF97200981995 /* User.m */; };
+		A4249BA71BBAF97200981995 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = A4249BA41BBAF97200981995 /* Post.m */; };
 		A49832521BB566820032C8FD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49832511BB566820032C8FD /* Social.framework */; };
 		A4C88CC31BB2A6D0003C64CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CC21BB2A6D0003C64CD /* AppDelegate.swift */; };
-		A4C88CC51BB2A6D0003C64CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C88CC41BB2A6D0003C64CD /* ViewController.swift */; };
 		A4C88CC81BB2A6D0003C64CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C88CC61BB2A6D0003C64CD /* Main.storyboard */; };
 		A4C88CCA1BB2A6D0003C64CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C88CC91BB2A6D0003C64CD /* Images.xcassets */; };
 		A4C88CCD1BB2A6D0003C64CD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C88CCB1BB2A6D0003C64CD /* LaunchScreen.xib */; };
@@ -40,11 +52,26 @@
 		3B35A284DACB202B1E6F8DFF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4302B25BCE7D998AAB72C066 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE19B8350AA8EDBB246D3D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A4249B811BBAA5DF00981995 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		A4249B841BBAA9A200981995 /* VKSocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKSocialController.swift; sourceTree = "<group>"; };
+		A4249B8B1BBAAAAE00981995 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		A4249B8C1BBAAAAE00981995 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		A4249B921BBABD6900981995 /* LoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		A4249B931BBABD6900981995 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		A4249B961BBAC3C800981995 /* BaseSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSocialViewController.swift; sourceTree = "<group>"; };
+		A4249B981BBAEDCE00981995 /* FBSocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSocialController.swift; sourceTree = "<group>"; };
+		A4249B9A1BBAEDF500981995 /* TWSocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWSocialController.swift; sourceTree = "<group>"; };
+		A4249B9D1BBAF4D700981995 /* SocialModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialModel.xcdatamodel; sourceTree = "<group>"; };
+		A4249B9F1BBAF97200981995 /* ImageUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUrl.h; sourceTree = "<group>"; };
+		A4249BA01BBAF97200981995 /* ImageUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUrl.m; sourceTree = "<group>"; };
+		A4249BA11BBAF97200981995 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		A4249BA21BBAF97200981995 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		A4249BA31BBAF97200981995 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		A4249BA41BBAF97200981995 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		A49832511BB566820032C8FD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A4C88CBD1BB2A6D0003C64CD /* SocialManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C88CC11BB2A6D0003C64CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4C88CC21BB2A6D0003C64CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4C88CC41BB2A6D0003C64CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4C88CC71BB2A6D0003C64CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4C88CC91BB2A6D0003C64CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4C88CCC1BB2A6D0003C64CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -99,6 +126,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A4249B831BBAA94C00981995 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4249B811BBAA5DF00981995 /* RootViewController.swift */,
+				A4249B841BBAA9A200981995 /* VKSocialController.swift */,
+				A4249B981BBAEDCE00981995 /* FBSocialController.swift */,
+				A4249B9A1BBAEDF500981995 /* TWSocialController.swift */,
+				A4249B961BBAC3C800981995 /* BaseSocialViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A4249B8A1BBAAA8C00981995 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4249B8B1BBAAAAE00981995 /* PostCell.swift */,
+				A4249B8C1BBAAAAE00981995 /* PostCell.xib */,
+				A4249B921BBABD6900981995 /* LoadingCell.swift */,
+				A4249B931BBABD6900981995 /* LoadingCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A4249B8F1BBAAE8500981995 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4249B9F1BBAF97200981995 /* ImageUrl.h */,
+				A4249BA01BBAF97200981995 /* ImageUrl.m */,
+				A4249BA11BBAF97200981995 /* User.h */,
+				A4249BA21BBAF97200981995 /* User.m */,
+				A4249BA31BBAF97200981995 /* Post.h */,
+				A4249BA41BBAF97200981995 /* Post.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		A4C88CB41BB2A6D0003C64CD = {
 			isa = PBXGroup;
 			children = (
@@ -122,13 +185,16 @@
 		A4C88CBF1BB2A6D0003C64CD /* SocialManager */ = {
 			isa = PBXGroup;
 			children = (
-				A4C88CEE1BB2F0E5003C64CD /* Manager */,
+				A4249B8F1BBAAE8500981995 /* Models */,
+				A4249B8A1BBAAA8C00981995 /* Views */,
+				A4249B831BBAA94C00981995 /* Controller */,
+				A4C88CEE1BB2F0E5003C64CD /* Managers */,
 				A4C88CC21BB2A6D0003C64CD /* AppDelegate.swift */,
-				A4C88CC41BB2A6D0003C64CD /* ViewController.swift */,
 				A4C88CC61BB2A6D0003C64CD /* Main.storyboard */,
 				A4C88CC91BB2A6D0003C64CD /* Images.xcassets */,
 				A4C88CCB1BB2A6D0003C64CD /* LaunchScreen.xib */,
 				A4C88CC01BB2A6D0003C64CD /* Supporting Files */,
+				A4249B9C1BBAF4D700981995 /* SocialModel.xcdatamodeld */,
 			);
 			path = SocialManager;
 			sourceTree = "<group>";
@@ -159,7 +225,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A4C88CEE1BB2F0E5003C64CD /* Manager */ = {
+		A4C88CEE1BB2F0E5003C64CD /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				A4C88CEC1BB2EFAB003C64CD /* SocialManager.swift */,
@@ -168,7 +234,7 @@
 				A4C88CF31BB2F81C003C64CD /* VKSocialNetwork.swift */,
 				A4C88CF51BB2FA67003C64CD /* TWSocialNetwork.swift */,
 			);
-			name = Manager;
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		AB5613D75F3CB2A93D2E5351 /* Pods */ = {
@@ -265,6 +331,8 @@
 			files = (
 				A4C88CEA1BB2AD9F003C64CD /* TwitterKitResources.bundle in Resources */,
 				A4C88CC81BB2A6D0003C64CD /* Main.storyboard in Resources */,
+				A4249B951BBABD6900981995 /* LoadingCell.xib in Resources */,
+				A4249B8E1BBAAAAE00981995 /* PostCell.xib in Resources */,
 				A4C88CCD1BB2A6D0003C64CD /* LaunchScreen.xib in Resources */,
 				A4C88CCA1BB2A6D0003C64CD /* Images.xcassets in Resources */,
 			);
@@ -331,11 +399,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C88CF41BB2F81C003C64CD /* VKSocialNetwork.swift in Sources */,
+				A4249B851BBAA9A200981995 /* VKSocialController.swift in Sources */,
 				A4C88CED1BB2EFAB003C64CD /* SocialManager.swift in Sources */,
+				A4249B941BBABD6900981995 /* LoadingCell.swift in Sources */,
+				A4249BA61BBAF97200981995 /* User.m in Sources */,
 				A4C88CF21BB2F40B003C64CD /* FBSocialNetwork.swift in Sources */,
-				A4C88CC51BB2A6D0003C64CD /* ViewController.swift in Sources */,
+				A4249B971BBAC3C800981995 /* BaseSocialViewController.swift in Sources */,
+				A4249B9B1BBAEDF500981995 /* TWSocialController.swift in Sources */,
 				A4C88CC31BB2A6D0003C64CD /* AppDelegate.swift in Sources */,
 				A4C88CF01BB2F0F9003C64CD /* SocialNetwork.swift in Sources */,
+				A4249B8D1BBAAAAE00981995 /* PostCell.swift in Sources */,
+				A4249BA51BBAF97200981995 /* ImageUrl.m in Sources */,
+				A4249BA71BBAF97200981995 /* Post.m in Sources */,
+				A4249B991BBAEDCE00981995 /* FBSocialController.swift in Sources */,
+				A4249B9E1BBAF4D700981995 /* SocialModel.xcdatamodeld in Sources */,
+				A4249B821BBAA5DF00981995 /* RootViewController.swift in Sources */,
 				A4C88CF61BB2FA67003C64CD /* TWSocialNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +636,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A4249B9C1BBAF4D700981995 /* SocialModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A4249B9D1BBAF4D700981995 /* SocialModel.xcdatamodel */,
+			);
+			currentVersion = A4249B9D1BBAF4D700981995 /* SocialModel.xcdatamodel */;
+			path = SocialModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A4C88CB51BB2A6D0003C64CD /* Project object */;
 }

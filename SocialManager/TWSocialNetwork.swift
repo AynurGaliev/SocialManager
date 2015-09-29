@@ -9,15 +9,25 @@
 import UIKit
 import TwitterKit
 
-class TWSocialNetwork: SocialNetwork {
+class TWSocialNetwork: NSObject {
    
     struct TWConstants {
         static let kConsumerKey   : String = "Twitter consumer key"
         static let kConsumerSecret: String = "Twitter secret key"
     }
     
+    class var sharedInstance: TWSocialNetwork {
+        struct Static {
+            static var token: dispatch_once_t = dispatch_once_t()
+            static var instance: TWSocialNetwork!
+        }
+        dispatch_once(&Static.token, { () -> Void in
+            Static.instance = TWSocialNetwork()
+        })
+        return Static.instance
+    }
+    
     private let twitter: Twitter = Twitter.sharedInstance()
-    private var requestBuilder: TWRequestBuilder!
     
     class var consumerKey: String {
         if let plistDict = NSBundle.mainBundle().infoDictionary, let lConsumerKey = plistDict[TWConstants.kConsumerKey] as? String {
@@ -33,73 +43,28 @@ class TWSocialNetwork: SocialNetwork {
         fatalError("\(__FUNCTION__) doesn't exist in .plist file")
     }
     
-    override class var appID: String {
-        println("WARNING: AppID doesn't exist for Twitter")
-        return ""
+    func GET_POSTS(count: Int, successBlock: ((posts: [FSPost]?) -> Void)?, failureBlock: ((error: NSError!) -> Void)?)  {
+
+    }
+}
+
+extension TWSocialNetwork: SocialProtocol {
+    
+    class var appID: String? {
+        get {
+            println("WARNING: AppID doesn't exist for Twitter")
+            return nil
+        }
     }
     
-    override var type: SocialType {
-        return .TW
-    }
-    
-    override func login(successBlock: ((success: Bool) -> Void)?) {
+    func login(successBlock: ((success: Bool) -> Void)?) {
         self.twitter.logInWithCompletion { (session: TWTRSession?, error: NSError?) -> Void in
             
         }
     }
     
-    override func logout() {
+    func logout() {
         self.twitter.logOut()
     }
     
-    func createBuilder() -> TWRequestBuilder {
-        self.requestBuilder = TWRequestBuilder.create()
-        return self.requestBuilder
-    }
-}
-
-class TWRequestBuilder: RequestBuilder  {
-    
-    private var apiVersion: String {
-        get { return _apiVersion }
-        set { self._apiVersion = newValue }
-    }
-    
-    private var method: String {
-        get { return _method }
-        set { self._method = newValue }
-    }
-    
-    private var HTTPMethod: String {
-        get { return _HTTPMethod }
-        set { self._HTTPMethod = newValue }
-    }
-    
-    class func create() -> TWRequestBuilder {
-        return TWRequestBuilder()
-    }
-    
-    var POST: TWRequestBuilder {
-        self.HTTPMethod = HttpMethod.POST.rawValue
-        return self
-    }
-    
-    var GET: TWRequestBuilder {
-        self.HTTPMethod = HttpMethod.GET.rawValue
-        return self
-    }
-    
-    var DELETE: TWRequestBuilder {
-        self.HTTPMethod = HttpMethod.DELETE.rawValue
-        return self
-    }
-    
-    var Posts: TWRequestBuilder {
-        self.method = "posts.get"
-        return self
-    }
-    
-    func startRequest(params: [String : AnyObject], successBlock: ((response: VKResponse!) -> Void)?, failureBlock: ((error: NSError!) -> Void)?) {
-        let request = Twitter.sharedInstance().APIClient
-    }
 }

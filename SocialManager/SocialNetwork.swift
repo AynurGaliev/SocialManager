@@ -15,6 +15,15 @@ enum SocialType: String {
     case WhatsApp = "Whatsapp"
     case Undefined = ""
     
+    init(intValue: Int) {
+        switch intValue {
+            case 0: self = .VK
+            case 1: self = .FB
+            case 2: self = .TW
+            default: self = .Undefined
+        }
+    }
+    
     var intValue: Int {
         switch self {
             case .FB        : return 0
@@ -25,48 +34,19 @@ enum SocialType: String {
         }
     }
     
-    var networkClass: AnyClass {
+    var network: NSObject {
         switch self {
-            case .FB        : return FBSocialNetwork.self
-            case .VK        : return VKSocialNetwork.self
-            case .TW        : return TWSocialNetwork.self
-            case .WhatsApp  : return NSObject.self
-            case .Undefined : return NSObject.self
+        case .FB        : return FBSocialNetwork.sharedInstance
+        case .VK        : return VKSocialNetwork.sharedInstance
+        case .TW        : return TWSocialNetwork.sharedInstance
+        case .WhatsApp  : return NSObject()
+        case .Undefined : return NSObject()
         }
     }
 }
 
-class SocialNetwork: NSObject {
-   
-    var type          : SocialType { return .Undefined }
-    class var appID   : String { fatalError("\(__FUNCTION__) not implemented")}
-    
-    override init() {
-        super.init()
-    }
-    
-    func login(successBlock: ((success: Bool) -> Void)?) {
-        fatalError("\(__FUNCTION__) not implemented")
-    }
-    
-    func logout() {
-        fatalError("\(__FUNCTION__) not implemented")
-    }
-    
-    class func create(type: SocialType) -> SocialNetwork {
-        switch type {
-            case .FB : return FBSocialNetwork()
-            case .VK : return VKSocialNetwork()
-            case .TW : return TWSocialNetwork()
-            default  : return SocialNetwork()
-        }
-    }
-}
-
-class RequestBuilder {
-    
-    var _HTTPMethod : String!
-    var _method     : String!
-    var _apiVersion : String!
-
+protocol SocialProtocol: NSObjectProtocol {
+    func logout()
+    func login(successBlock: SuccessBlock)
+    static var appID: String? {get}
 }

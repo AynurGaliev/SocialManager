@@ -19,37 +19,6 @@ enum HttpMethod: String {
 
 class SocialManager: NSObject {
    
-    private static var networks: Set<SocialNetwork>! = Set<SocialNetwork>()
-    
-    class var VK: VKSocialNetwork? { return SocialManager.network(.VK) as? VKSocialNetwork }
-    class var FB: FBSocialNetwork? { return SocialManager.network(.FB) as? FBSocialNetwork }
-    class var TW: TWSocialNetwork? { return SocialManager.network(.TW) as? TWSocialNetwork }
-    
-    func setNetworks(socialNetworks: Set<SocialNetwork>) {
-        SocialManager.networks = socialNetworks
-    }
-    
-    func removeNetwork(types: [SocialType]) {
-        
-    }
-    
-    class func setup(types: Set<SocialType>) {
-        for type in types {
-            SocialManager.networks.insert(SocialNetwork.create(type))
-        }
-    }
-    
-    func logout() {
-        for network in SocialManager.networks {
-            network.logout()
-        }
-    }
-    
-    private class func network(type: SocialType) -> SocialNetwork? {
-        return filter(SocialManager.networks, { (network: SocialNetwork) -> Bool in
-            return network.type == type
-        }).first
-    }
 }
 
 extension Double {

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ImageUrl" representedClassName="ImageUrl" syncable="YES">
+        <attribute name="large" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medium" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="small" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Post" inverseName="imageURLs" inverseEntity="Post" syncable="YES"/>
+    </entity>
+    <entity name="Post" representedClassName="Post" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="post_id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="likesCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="likes.count"/>
+            </userInfo>
+        </attribute>
+        <relationship name="imageURLs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ImageUrl" inverseName="post" inverseEntity="ImageUrl" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="User" inverseName="sentPost" inverseEntity="User" syncable="YES"/>
+        <userInfo>
+            <entry key="mappedKeyName" value="items"/>
+        </userInfo>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="avatarURL" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="photo_100"/>
+            </userInfo>
+        </attribute>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="first_name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="isOnline" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="online"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="last_name"/>
+            </userInfo>
+        </attribute>
+        <relationship name="sentPost" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Post" inverseName="owner" inverseEntity="Post" syncable="YES"/>
+        <userInfo>
+            <entry key="mappedKeyName" value="profiles"/>
+        </userInfo>
+    </entity>
+    <elements>
+        <element name="Post" positionX="-1109" positionY="-763" width="128" height="103"/>
+        <element name="User" positionX="-920" positionY="-783" width="128" height="133"/>
+        <element name="ImageUrl" positionX="-1316" positionY="-700" width="128" height="103"/>
+    </elements>
+</model>
